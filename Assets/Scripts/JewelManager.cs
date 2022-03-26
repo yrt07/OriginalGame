@@ -10,6 +10,7 @@ public class JewelManager : MonoBehaviour
     public void addjewel()
     {
         Debug.Log("addjewel");
+
         jewelNum++;
         showjewel(jewelNum);
     }
@@ -33,6 +34,7 @@ public class JewelManager : MonoBehaviour
             }
         }
     }
+
     // Start is called before the first frame update
     void Start()
     {
