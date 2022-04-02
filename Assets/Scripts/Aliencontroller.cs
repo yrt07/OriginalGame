@@ -2,20 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Aliencontroller : MonoBehaviour
 {
     // Start is called before the first frame update
     // Update is called once per frame
 
     bool IsNear;
+    public int Alian_Message;
     void Update()
     {
 
         if (Input.GetKeyDown(KeyCode.F2))
         {
+
             if (IsNear)
             {
                 Debug.Log("カギGet!");
+
+                //GameObject AlienMessage = GameObject.Find("MessagePanel_a").GetComponent<AlienMessage>();
+
+                //AlienMessage.StartCoroutine("txt_speed");
+
+
+
             }
         }
     }
@@ -25,6 +35,7 @@ public class Aliencontroller : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             IsNear = true;
+
         }
     }
 
@@ -35,4 +46,7 @@ public class Aliencontroller : MonoBehaviour
             IsNear = false;
         }
     }
+
+
 }
+

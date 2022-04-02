@@ -12,7 +12,7 @@ public class Itemcontroller : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("テスト");
+        //Debug.Log("テスト");
 
         if (collision.gameObject.tag == "Player")
         {
