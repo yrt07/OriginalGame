@@ -9,20 +9,28 @@ public class Aliencontroller : MonoBehaviour
     // Update is called once per frame
 
     bool IsNear;
-    public int Alian_Message;
+    public AlienMessage alianMessage;
+
+    private void Start()
+    {
+        alianMessage.gameObject.SetActive(false);
+    }
+
     void Update()
     {
 
         if (Input.GetKeyDown(KeyCode.F2))
         {
 
-            if (IsNear)
+            if (IsNear && alianMessage.gameObject.activeSelf == false)
             {
-                Debug.Log("カギGet!");
+                alianMessage.gameObject.SetActive(true);
+                //Debug.Log("カギGet!");
+                //var Alien_Message = GameObject.Find("MessagePanel_a").GetComponent<AlienMessage>();
 
-                //GameObject AlienMessage = GameObject.Find("MessagePanel_a").GetComponent<AlienMessage>();
-
-                //AlienMessage.StartCoroutine("txt_speed");
+                alianMessage.msg_start();
+                alianMessage.msg_Updata();
+                //Alien_Message.goToNextMessage();
 
 
 
